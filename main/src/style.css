@@ -1,0 +1,33 @@
+h1 {
+    font-size: large;
+    font-weight: 300;
+}
+
+body{
+    background-image: url(Background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.gamewindow{
+    position: relative;
+    top: 7vw;
+    left: 42vw;
+    width: 52vw;
+    height: 40vw;
+    background-image: url(Main-Game.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background: url(Main-Game.svg); */
+}
+.upgradeWindow{
+    bottom: 33vw;
+    left: 15vw;
+    width: 23vw;
+    height: 40vw;
+    background-image: url(Main-Game.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
