@@ -1,1 +1,0 @@
-document.getElementById("Hello").innerHTML = "Hello World in Java Script";

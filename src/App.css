@@ -1,0 +1,215 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  background-image: url(./ressources/Background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+}
+
+.App-game {
+  position: absolute;
+  top: 12vh;
+  left: 44vw;
+  width: 53vw;
+  height: 84vh;
+  background-image: url(./ressources/Main-Game.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.App-upgrades{
+  top: 12vh;
+  left: 12vw;
+  width: 28vw;
+  height: 84vh;
+  background-image: url(./ressources/Main-Game.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.App-currency {
+  position: absolute;
+  top: 1.8vh;
+  right: 79.6vw;
+  color: white;
+  font-size: 2.25vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-colorValue {
+  position: absolute;
+  top: 1.5vh;
+  left: 1.1vw;
+  color: white;
+  font-size: 2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-multiplier {
+  position: absolute;
+  top: 1.5vh;
+  right: 3.6vw;
+  color: white;
+  font-size: 2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-machines {
+  position: absolute;
+  top: 11.2vh;
+  left: 1.1vw;
+  color: white;
+  font-size: 2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-machineAmount {
+  position: absolute;
+  top: 11.2vh;
+  right: 3.6vw;
+  color: white;
+  font-size: 2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-income {
+  position: absolute;
+  top: 20.9vh;
+  left: 1.1vw;
+  color: white;
+  font-size: 2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-incomeAmount {
+  position: absolute;
+  top: 20.9vh;
+  right: 1vw;
+  color: white;
+  font-size: 2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-splitBar {
+  position: absolute;
+  top: 28vh;
+  left: 0.5vw;
+  right: 0.5vw;
+  height: 0.45vh;
+  background-image: url(./ressources/split-bar.svg);
+}
+
+
+.Plus-ButtonMtp {
+  top: 1.5vh;
+  right: 0.8vw;
+  width: 2.2vw;
+  height: 2.2vw;
+  background-image: url(./ressources/plus-button.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  transition-duration: 150ms;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Plus-ButtonMch {
+  top: 11.2vh;
+  right: 0.8vw;
+  width: 2.2vw;
+  height: 2.2vw;
+  background-image: url(./ressources/plus-button.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  transition-duration: 150ms;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Plus-ButtonMtp:hover {
+  background-image: url(./ressources/plus-buttonH.svg);
+}
+
+.Plus-ButtonMch:hover {
+  background-image: url(./ressources/plus-buttonH.svg);
+}
+
+.PowerUp {
+  background-image: url(./ressources/upgrade.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+}
