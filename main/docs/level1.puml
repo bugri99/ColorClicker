@@ -1,9 +1,0 @@
-@startuml C4-Modell-Level1
-!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
-
-Person(customer, "Customer", "the customer wants to play a Game, where he can invest a lot of time")
-Container(colorClicker, "ColorClicker", "Game", "the color clicker tries that the player of this game invests a lot of money and time in the game")
-
-Rel(customer, colorClicker, "Label", "Optional Technology")
-
-@enduml
