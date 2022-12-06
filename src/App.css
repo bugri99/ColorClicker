@@ -1,389 +1,421 @@
 .App {
-    text-align: center;
-  }
-  
-  .App-header {
-    background-color: #282c34;
-    background-image: url(./ressources/Background.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    max-height: 100vh;
-    min-width: 100vw;
-    max-width: 100vw;
-  }
-  
-  .App-game {
-    position: absolute;
-    top: 12vh;
-    left: 44vw;
-    width: 53vw;
-    height: 84vh;
-    background-image: url(./ressources/Main-Game.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .App-upgrades{
-    top: 12vh;
-    left: 12vw;
-    width: 28vw;
-    height: 84vh;
-    background-image: url(./ressources/Main-Game.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-  }
-  
-  .App-currency {
-    position: absolute;
-    top: 1.8vh;
-    right: 79.6vw;
-    color: white;
-    font-size: 2.25vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .Upgrades-colorValue {
-    position: absolute;
-    top: 1.5vh;
-    left: 1.1vw;
-    color: white;
-    font-size: 2vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .Upgrades-multiplier {
-    position: absolute;
-    top: 1.5vh;
-    right: 3.6vw;
-    color: white;
-    font-size: 2vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .Upgrades-machines {
-    position: absolute;
-    top: 11.2vh;
-    left: 1.1vw;
-    color: white;
-    font-size: 2vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .Upgrades-machineAmount {
-    position: absolute;
-    top: 11.2vh;
-    right: 3.6vw;
-    color: white;
-    font-size: 2vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .Upgrades-income {
-    position: absolute;
-    top: 20.9vh;
-    left: 1.1vw;
-    color: white;
-    font-size: 2vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .Upgrades-incomeAmount {
-    position: absolute;
-    top: 20.9vh;
-    right: 1vw;
-    color: white;
-    font-size: 2vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .Upgrades-splitBar {
-    position: absolute;
-    top: 28vh;
-    left: 0.5vw;
-    right: 0.5vw;
-    height: 0.45vh;
-    background-image: url(./ressources/split-bar.svg);
-  }
-  
-  
-  .Plus-ButtonMtp {
-    top: 1.5vh;
-    right: 0.8vw;
-    width: 2.2vw;
-    height: 2.2vw;
-    background-image: url(./ressources/plus-button.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  .Plus-ButtonMtpH {
-    top: 1.5vh;
-    right: 0.8vw;
-    width: 2.2vw;
-    height: 2.2vw;
-    background-image: url(./ressources/plus-buttonH.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .Plus-ButtonMch {
-    top: 11.2vh;
-    right: 0.8vw;
-    width: 2.2vw;
-    height: 2.2vw;
-    background-image: url(./ressources/plus-button.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  .Plus-ButtonMchH {
-    top: 11.2vh;
-    right: 0.8vw;
-    width: 2.2vw;
-    height: 2.2vw;
-    background-image: url(./ressources/plus-buttonH.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .PowerUp {
-    background-image: url(./ressources/upgrade.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    color: white;
-    font-size: 1.15vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .PowerUp-description {
-    margin: auto;
-    left: 1%;
-    width: 97%;
-    height: 18%;
-    text-align: center;
-    vertical-align: middle;
-    position: absolute;
-    color: white;
-    font-size: 1.1vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .PowerUp-price {
-    width: 100%;
-    top: 61.5%;
-    position: absolute;
-    color: greenyellow;
-    text-align: center;
-    font-size: 1.8vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .App-circleboundary {
-    background-image: url(./ressources/circle-boundary-background.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    min-height: 100vh;
-    max-height: 100vh;
-    min-width: 100vw;
-    max-width: 100vw;
-    pointer-events: none;
-  }
-  
-  .App-xpbar {
-    position: absolute;
-    top: 2.2vh;
-    left: 77vw;
-   
-    font-size: 2.25vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .App-xpbartext {
-    position: absolute;
-    top: 0vh;
-    right: 16vw;
-    width: 15vw;
-    color: white;
-    font-size: 2vw;
-    text-align: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  .App-xpbarxp {
-    position: absolute;
-    top: 0vh;
-    right: -4vw;
-    width: 15vw;
-    color: rgb(83, 57, 102);
-    font-size: 2vw;
-    text-align: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .Plus-ButtonMch-price {
-    width: 100%;
-    top: 18.5%;
-    right: 2%;
-    position: absolute;
-    color: greenyellow;
-    text-align: right;
-    font-size: 1.4vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
-  
-  .Plus-ButtonMtp-price {
-    width: 100%;
-    top: 6.9%;
-    right: 2%;
-    position: absolute;
-    color: greenyellow;
-    text-align: right;
-    font-size: 1.4vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    opacity: 0.8;
-    background-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-  }
+  /* text-align: center; */
+}
+
+.App-header {
+  position: absolute;
+  background-color: rgb(83, 57, 102);
+  background-image: url(./ressources/Background.svg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  max-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.App-game {
+  position: absolute;
+  top: 12%;
+  left: 44%;
+  width: 53%;
+  height: 84%;
+  background-image: url(./ressources/Main-Game.svg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow:hidden
+}
+
+.App-upgrades{
+  position: absolute;
+  top: 12%;
+  left: 12%;
+  width: 28%;
+  height: 84%;
+  background-image: url(./ressources/Main-Game.svg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.App-currency {
+  position: absolute;
+  top: 1.95%;
+  right: 79.6%;
+  color: white;
+  font-size: 2.3rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-colorValue {
+  position: absolute;
+  top: 1.5%;
+  left: 2.9%;
+  color: white;
+  font-size: 220%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-multiplier {
+  position: absolute;
+  top: 1.5%;
+  right: 12%;
+  color: white;
+  font-size: 220%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-machines {
+  position: absolute;
+  top: 13.5%;
+  left: 2.9%;
+  color: white;
+  font-size: 220%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-machineAmount {
+  position: absolute;
+  top: 13.5%;
+  right: 12.5%;
+  color: white;
+  font-size: 220%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-income {
+  position: absolute;
+  top: 25.5%;
+  left: 2.9%;
+  color: white;
+  font-size: 220%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-incomeAmount {
+  position: absolute;
+  top: 25.5%;
+  right: 4%;
+  color: white;
+  font-size: 220%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-splitBar {
+  position: absolute;
+  top: 33%;
+  left: 2%;
+  right: 2%;
+  height: 0.5%;
+  background-image: url(./ressources/split-bar.svg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.Plus-ButtonMtp {
+  position: absolute;
+  top: 1.8%;
+  right: 2.8%;
+  width: 2.4vw;
+  height: 2.4vw;
+  background-image: url(./ressources/plus-button.svg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+.Plus-ButtonMtpH {
+  position: absolute;
+  top: 1.8%;
+  right: 2.8%;
+  width: 2.4vw;
+  height: 2.4vw;
+  background-image: url(./ressources/plus-buttonH.svg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Plus-ButtonMch {
+  position: absolute;
+  top: 13.8%;
+  right: 2.8%;
+  width: 2.4vw;
+  height: 2.4vw;
+  background-image: url(./ressources/plus-button.svg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+.Plus-ButtonMchH {
+  position: absolute;
+  top: 13.8%;
+  right: 2.8%;
+  width: 2.4vw;
+  height: 2.4vw;
+  background-image: url(./ressources/plus-buttonH.svg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Upgrades-powerUps {
+  position: absolute;
+  top: 33.5%;
+  width: 100%;
+  height: 66%;
+  overflow: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.Upgrades-powerUps::-webkit-scrollbar {
+  display: none;
+}
+.PowerUp {
+  position: absolute;
+  opacity: 0.8;
+  /* border: 1px solid blue; */
+  background-image: url(./ressources/upgrade.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.PowerUp-description {
+  position: absolute;
+  margin: auto;
+  left: 1%;
+  width: 98%;
+  height: 18%;
+  bottom: 36%;
+  /* border: 1px solid red; */
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  color: white;
+  font-size: 110%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+          padding-top:10%;
+          padding-bottom:15%;
+}
+
+.PowerUp-price {
+  position: absolute;
+  left: 1%;
+  bottom: 6.5%;
+  /* border: 1px solid green; */
+  width: 98%;
+  height: 34%;
+  color: greenyellow;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 190%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.App-xpbar {
+  position: absolute;
+  top: 2.2%;
+  left: 77%;
+  width: 20%;
+  height: 6%;
+  /* border: 1px solid blue; */
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.App-xpbartext {
+  position: absolute;
+  top: 2.4%;
+  right: 23.7%;
+  color: white;
+  font-size: 230%;
+  text-align: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+.App-xpbarxp {
+  position: absolute;
+  top: 8%;
+  right: 4%;
+  color: rgb(83, 57, 102);
+  font-size: 220%;
+  text-align: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Plus-ButtonMch-price {
+  position: absolute;
+  top: 19.5%;
+  right: 3%;
+  color: greenyellow;
+  text-align: right;
+  font-size: 150%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.Plus-ButtonMtp-price {
+  position: absolute;
+  top: 7.5%;
+  right: 3%;
+  color: greenyellow;
+  text-align: right;
+  font-size: 150%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 0.8;
+  background-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}

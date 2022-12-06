@@ -24,15 +24,8 @@ import "./App.css";
  * - more power-ups
  * - balancing of the power-up prices and effects
  * - currently, every color has the same probability of appearance, so color rarity based on level maybe?
- * - center the text of a power-up description if only one line long
  * - save and load game data (currently everything starts from the beginning on site refresh)
  * -------------------------------------------------------------------------------------
- * Known Issues:
- * -  circle can be clicked outside of the game box, currently there is
- *    a svg with a hole where the game window is located and the normal background outside of it (see circle-boundary-background.svg).
- *    In ".App-circleboundary" css class the "pointer-events" prop is set to "none" so the component is
- *    ignored completely when clicked, all it does is cover the circles where they 
- *    shouldn't be, the circles are still there though (perhaps a different solution needed)
  */
 function App() {
   document.body.style.overflow = "hidden";
@@ -61,7 +54,7 @@ function App() {
   const [multiplier, setMultiplier] = useState(1); //color value multiplier (initial 1)
   const [machines, setMachines] = useState(0); //machines owned (inital 0)
   const [growthPerMachine, setGrowthPerMachine] = useState(1.1); //income growth factor per machine owned (initial 1.1)
-  const [income, setIncome] = useState(100); //income amount per second (initial 100)
+  const [income, setIncome] = useState(0); //income amount per second (initial 0)
   const [level, setLevel] = useState(0); //player level (initial 0)
   const [xp, setXp] = useState(0); //player xp (initial 0)
   const [nextLvXpRequired, setNextLvXpRequired] = useState(
@@ -182,22 +175,22 @@ function App() {
         className="circle"
         id={id}
         initial={{
-          x: `${Math.cos(directions[index]) * 40}vw`,
-          y: `${Math.sin(directions[index]) * 40 + 19}vw`,
+          x: `${Math.cos(directions[index]) * 40 + 23}vw`,
+          y: `${Math.sin(directions[index]) * 40 + 18}vw`,
         }}
         animate={{
-          x: `${Math.cos(directions[index + 1]) * 40}vw`,
-          y: `${Math.sin(directions[index + 1]) * 40 + 19}vw`,
+          x: `${Math.cos(directions[index + 1]) * 40 + 23}vw`,
+          y: `${Math.sin(directions[index + 1]) * 40 + 18}vw`,
         }}
         transition={{
           repeat: Infinity,
-          duration: 7.5,
+          duration: 5.5,
           repeatDelay: getRandom(1, 5000) / 100,
         }}
         onClick={handleClick}
         style={{
-          width: "6vw",
-          height: "6vw",
+          width: "8rem",
+          height: "8rem",
           position: "absolute",
         }}
       >
@@ -249,25 +242,9 @@ function App() {
     }
     return (
       <div onClick={handleClick}>
-        <motion.svg
-          className="Plus-ButtonMtp"
-          style={{
-            filter: `${
-              moneyCount >= nextMultiplierPrice
-                ? "grayscale(0%)"
-                : "grayscale(100%)"
-            }`,
-          }}
-        />
+        <motion.svg className="Plus-ButtonMtp" />
         <motion.svg
           className="Plus-ButtonMtpH"
-          style={{
-            filter: `${
-              moneyCount >= nextMultiplierPrice
-                ? "grayscale(0%)"
-                : "grayscale(100%)"
-            }`,
-          }}
           opacity={0}
           whileHover={{ opacity: 1 }}
         />
@@ -301,31 +278,15 @@ function App() {
       if (moneyCount >= nextMachinePrice) {
         setMoneyCount((prev) => prev - nextMachinePrice);
         setMachines((prev) => prev + 1);
-        setIncome(Math.floor(100 * Math.pow(growthPerMachine, machines + 1)));
+        setIncome(Math.floor(50 * Math.pow(growthPerMachine, machines + 1)));
         setNextMachinePrice((prev) => Math.floor(prev * 1.6));
       }
     }
     return (
       <div onClick={handleClick}>
-        <motion.svg
-          className="Plus-ButtonMch"
-          style={{
-            filter: `${
-              moneyCount >= nextMachinePrice
-                ? "grayscale(0%)"
-                : "grayscale(100%)"
-            }`,
-          }}
-        />
+        <motion.svg className="Plus-ButtonMch" />
         <motion.svg
           className="Plus-ButtonMchH"
-          style={{
-            filter: `${
-              moneyCount >= nextMachinePrice
-                ? "grayscale(0%)"
-                : "grayscale(100%)"
-            }`,
-          }}
           opacity={0}
           whileHover={{ opacity: 1 }}
         />
@@ -407,7 +368,7 @@ function App() {
           );
           setIncome(
             Math.floor(
-              100 * Math.pow(growthPerMachine + powerUp.effect.value, machines)
+              50 * Math.pow(growthPerMachine + powerUp.effect.value, machines)
             )
           );
           //case ColorMultiplier
@@ -426,16 +387,17 @@ function App() {
             2 + 49 * (availablePowerUps.indexOf(powerUp) % 2 === 0 ? 0 : 1)
           }%)`,
           top: `calc(${
-            36 +
-            15.5 *
+            2 +
+            23.9 *
               (availablePowerUps.indexOf(powerUp) % 2 === 0
                 ? availablePowerUps.indexOf(powerUp) === 0
                   ? 0
                   : availablePowerUps.indexOf(powerUp) / 2
                 : (availablePowerUps.indexOf(powerUp) - 1) / 2)
           }%)`,
+          right: "2%",
           width: "47%",
-          height: "14.2%",
+          height: "21.9%",
           position: "absolute",
         }}
       >
@@ -476,22 +438,24 @@ function App() {
    */
   function renderXPBar() {
     return (
-      <svg style={{ overflow: "visible" }}>
-        <rect width="20vw" height="2.5vw" rx="30" fill="rgb(43, 28, 51)" />
+      <svg
+        style={{ overflow: "visible", width: "100%" }}
+      >
+        <rect width="100%" height="33%" rx="7%" fill="rgb(43, 28, 51)" />
         <rect
-          width={`${20 * (xp / nextLvXpRequired)}vw`}
-          height="2.5vw"
-          rx="30"
+          width={`${100 * (xp / nextLvXpRequired)}%`}
+          height="33%"
+          rx="7%"
           fill="white"
           opacity={0.7}
         />
         <rect
-          width="20vw"
-          height="2.5vw"
-          rx="30"
+          width="100%"
+          height="33%"
+          rx="7%"
           fill="transparent"
           stroke="rgb(61, 42, 74)"
-          stroke-width="0.5vw"
+          stroke-width="0.5rem"
         />
       </svg>
     );
@@ -502,7 +466,6 @@ function App() {
       <header className="App-header">
         <div className="App-game">{renderCircles(200)}</div>
 
-        <div className="App-circleboundary"></div>
         <MoneyCounter />
         <div className="App-upgrades">
           <div className="Upgrades-colorValue">Farben-Wert:</div>
@@ -516,9 +479,9 @@ function App() {
           <div className="Upgrades-splitBar" />
           <div className="Upgrades-powerUps">{renderPowerUps()}</div>
         </div>
+        <div className="App-xpbartext">Lv: {level}</div>
         <div className="App-xpbar">
           {renderXPBar()}
-          <div className="App-xpbartext">Lv: {level}</div>
           <div className="App-xpbarxp">
             {xp}/{nextLvXpRequired}
           </div>
