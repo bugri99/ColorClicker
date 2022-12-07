@@ -171,6 +171,7 @@ function App() {
     }
     return (
       <motion.svg
+        data-testid={`circle-${id}`}
         viewBox={"0 0 100 100"}
         className="circle"
         id={id}
@@ -241,7 +242,7 @@ function App() {
       }
     }
     return (
-      <div onClick={handleClick}>
+      <div onClick={handleClick} data-testid="color-multiplier-plus-button">
         <motion.svg className="Plus-ButtonMtp" />
         <motion.svg
           className="Plus-ButtonMtpH"
@@ -283,7 +284,7 @@ function App() {
       }
     }
     return (
-      <div onClick={handleClick}>
+      <div onClick={handleClick} data-testid="machines-plus-button"> 
         <motion.svg className="Plus-ButtonMch" />
         <motion.svg
           className="Plus-ButtonMchH"
@@ -464,25 +465,25 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="App-game">{renderCircles(200)}</div>
+        <div className="App-game" data-testid="game-window">{renderCircles(200)}</div>
 
         <MoneyCounter />
-        <div className="App-upgrades">
-          <div className="Upgrades-colorValue">Farben-Wert:</div>
-          <div className="Upgrades-multiplier">x{multiplier}</div>
+        <div className="App-upgrades" data-testid="upgrades-window">
+          <div className="Upgrades-colorValue" data-testid="colorvalue-text">Farben-Wert:</div>
+          <div className="Upgrades-multiplier" data-testid="multiplier-value">x{multiplier}</div>
           {renderMultiplierPlusButton()}
-          <div className="Upgrades-machines">Maschinen:</div>
-          <div className="Upgrades-machineAmount">{machines}</div>
+          <div className="Upgrades-machines" data-testid="machines-text">Maschinen:</div>
+          <div className="Upgrades-machineAmount" data-testid="machines-amount">{machines}</div>
           {renderMachinesPlusButton()}
-          <div className="Upgrades-income">Einkommen:</div>
-          <div className="Upgrades-incomeAmount">{income} $</div>
-          <div className="Upgrades-splitBar" />
-          <div className="Upgrades-powerUps">{renderPowerUps()}</div>
+          <div className="Upgrades-income" data-testid="income-text">Einkommen:</div>
+          <div className="Upgrades-incomeAmount" data-testid="income-amount">{income} $</div>
+          <div className="Upgrades-splitBar" data-testid="splitbar" />
+          <div className="Upgrades-powerUps" data-testid="powerups-container">{renderPowerUps()}</div>
         </div>
-        <div className="App-xpbartext">Lv: {level}</div>
-        <div className="App-xpbar">
+        <div className="App-xpbartext" data-testid="level-text">Lv: {level}</div>
+        <div className="App-xpbar" data-testid="xpbar">
           {renderXPBar()}
-          <div className="App-xpbarxp">
+          <div className="App-xpbarxp" data-testid="xp-amount">
             {xp}/{nextLvXpRequired}
           </div>
         </div>
