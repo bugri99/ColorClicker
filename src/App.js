@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { powerUps, directions, colorPool } from "./components/Data";
+import { powerUps, directions, colorPool, colors } from "./components/Data";
 import { EffectType } from "./components/Effect";
 import { motion } from "framer-motion";
 import "./App.css";
+import { Color } from "./components/Color";
+
 /**
  * -------------------------------------------------------------------------------------
  * Useful links:
@@ -123,7 +125,7 @@ function App() {
       c = Math.round(Math.min(Math.max(0, c + c * lum), 255)).toString(16);
       result += ("00" + c).substr(c.length);
     }
-
+    console.log(result);
     return result;
   }
 
@@ -170,18 +172,18 @@ function App() {
       }, 10000);
     }
     return (
+
       <motion.svg
         data-testid={`circle-${id}`}
         viewBox={"0 0 100 100"}
-        className="circle"
         id={id}
         initial={{
-          x: `${Math.cos(directions[index]) * 40 + 23}vw`,
-          y: `${Math.sin(directions[index]) * 40 + 18}vw`,
+          x: `${Math.cos(directions[index]) * 40 + 22}vw`,
+          y: `${Math.sin(directions[index]) * 40 + 17}vw`,
         }}
         animate={{
           x: `${Math.cos(directions[index + 1]) * 40 + 23}vw`,
-          y: `${Math.sin(directions[index + 1]) * 40 + 18}vw`,
+          y: `${Math.sin(directions[index + 1]) * 40 + 20}vw`,
         }}
         transition={{
           repeat: Infinity,
@@ -195,8 +197,8 @@ function App() {
           position: "absolute",
         }}
       >
-        <defs>{getGradient(color.name)}</defs>
-        <circle cx={"50%"} cy={"50%"} r={"35%"} fill={`url(#${color.name})`} />
+        <defs>{getGradient(color.hex)}</defs>
+        <circle cx={"50%"} cy={"50%"} r={"35%"} fill={`url(#${color.hex})`} />
         <circle
           cx={"50%"}
           cy={"50%"}
@@ -205,6 +207,7 @@ function App() {
           opacity={0.001}
         />
       </motion.svg>
+
     );
   }
   /**
@@ -252,9 +255,8 @@ function App() {
         <div
           className="Plus-ButtonMtp-price"
           style={{
-            color: `${
-              moneyCount >= nextMultiplierPrice ? "greenyellow" : "red"
-            }`,
+            color: `${moneyCount >= nextMultiplierPrice ? "greenyellow" : "red"
+              }`,
           }}
         >
           {nextMultiplierPrice} $
@@ -284,7 +286,7 @@ function App() {
       }
     }
     return (
-      <div onClick={handleClick} data-testid="machines-plus-button"> 
+      <div onClick={handleClick} data-testid="machines-plus-button">
         <motion.svg className="Plus-ButtonMch" />
         <motion.svg
           className="Plus-ButtonMchH"
@@ -384,21 +386,19 @@ function App() {
         id={id}
         onClick={handleClick}
         style={{
-          left: `calc(${
-            2 + 49 * (availablePowerUps.indexOf(powerUp) % 2 === 0 ? 0 : 1)
-          }%)`,
-          top: `calc(${
-            2 +
+          left: `calc(${2 + 49 * (availablePowerUps.indexOf(powerUp) % 2 === 0 ? 0 : 1)
+            }%)`,
+          top: `calc(${2 +
             23.9 *
-              (availablePowerUps.indexOf(powerUp) % 2 === 0
-                ? availablePowerUps.indexOf(powerUp) === 0
-                  ? 0
-                  : availablePowerUps.indexOf(powerUp) / 2
-                : (availablePowerUps.indexOf(powerUp) - 1) / 2)
-          }%)`,
+            (availablePowerUps.indexOf(powerUp) % 2 === 0
+              ? availablePowerUps.indexOf(powerUp) === 0
+                ? 0
+                : availablePowerUps.indexOf(powerUp) / 2
+              : (availablePowerUps.indexOf(powerUp) - 1) / 2)
+            }%)`,
           right: "2%",
           width: "47%",
-          height: "21.9%",
+          height: "43.8%",
           position: "absolute",
         }}
       >
@@ -430,6 +430,46 @@ function App() {
     }
 
     return powerUpBuffer;
+  }
+
+  function renderColorValueDisplays() {
+    const colorsArr = []
+    for (let i = 0; i < colors.length; i++) {
+      let color = renderCircleDisplay(colors[i]);
+      colorsArr.push(color);
+
+    }
+    return colorsArr;
+  }
+
+  function renderCircleDisplay(color) {
+
+    return (<motion.svg
+      viewBox={"0 0 100 100"}
+      className="Color-display"
+      style={{
+        left: `calc(${23.9 *
+          (colors.indexOf(color) % 2 === 0
+            ? colors.indexOf(color) === 0
+              ? 0
+              : colors.indexOf(color) / 2
+            : (colors.indexOf(color) - 1) / 2)
+          }%)`,
+        top: `calc(${2 + 49 * (colors.indexOf(color) % 2 === 0 ? 0 : 1)
+          }%)`,
+        right: "2%",
+        width: "6rem",
+        height: "6rem",
+        position: "absolute",
+      }}
+    >
+
+      <circle cx={"50%"} cy={"50%"} r={"35%"} fill={`url(#${color.hex})`} />
+      <text x="35%" y="55%" font-family="Calibri" font-size="120%" >
+        {color.points * multiplier}
+      </text>
+    </motion.svg>
+    )
   }
 
   /**
@@ -479,6 +519,7 @@ function App() {
           <div className="Upgrades-incomeAmount" data-testid="income-amount">{income} $</div>
           <div className="Upgrades-splitBar" data-testid="splitbar" />
           <div className="Upgrades-powerUps" data-testid="powerups-container">{renderPowerUps()}</div>
+          <div className="Color-value-display">{renderColorValueDisplays()}</div>
         </div>
         <div className="App-xpbartext" data-testid="level-text">Lv: {level}</div>
         <div className="App-xpbar" data-testid="xpbar">
